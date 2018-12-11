@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="logo.png" type="image/x-icon"/>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/fav.png">
+        <!-- Author Meta -->
+        <meta name="author" content="Colorlib">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta charset="UTF-8">
+        <!-- Site Title -->
+        <title>Halaman Admin - Fake Hospital Yogyakarta</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/linearicons.css">=
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style> 
+            input[type="radio"] {
+                display:none;
+            }
+
+            input[type="radio"] {
+                color:#f2f2f2;
+                font-family:Arial, sans-serif;
+            }
+
+            input[type="radio"] {
+                display:inline-block;
+                width:19px;
+                height:19px;
+                margin:-2px 10px 0 0;
+                vertical-align:middle;
+                background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
+                cursor:pointer;
+            }
+
+            input[type="radio"]:checked {
+                background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
+            }
+
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            .button1 {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+            }
+
+            .button1:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+            input[type=text] {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type=password] {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=date] {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }       
+            .nice-select {
+                -webkit-tap-highlight-color: transparent;
+                background-color: #fff;
+                border-bottom: solid 1px #e8e8e8;
+                box-sizing: border-box;
+                clear: both;
+                cursor: pointer;
+                display: block;
+                float: center;
+                height: 42px;
+                line-height: 40px;
+                outline: none;
+                padding-left: 18px;
+                padding-right: 30px;
+                position: relative;
+                text-align: center;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                white-space: nowrap;
+                width: 50%; 
+            }
+
+            .nice-select:hover {
+                border-color: #dbdbdb; 
+            }
+            .nice-select:active, .nice-select.open, .nice-select:focus {
+                border-color: #999; 
+            }
+
+            .nice-select:after {
+                text-align: center;
+                border-bottom: 2px solid #999;
+                border-right: 2px solid #999;
+                content: '';
+                display: block;
+                height: 5px;
+                margin-top: -4px;
+                pointer-events: none;
+                position: absolute;
+                right: 12px;
+                top: 50%;
+                -webkit-transform-origin: 66% 66%;
+                -ms-transform-origin: 66% 66%;
+                transform-origin: 66% 66%;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: all 0.15s ease-in-out;
+                transition: all 0.15s ease-in-out;
+                width: 5px; 
+            }
+            .nice-select.open:after {
+                -webkit-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg); 
+            }
+            .nice-select.open .list {
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transform: scale(1) translateY(0);
+                -ms-transform: scale(1) translateY(0);
+                transform: scale(1) translateY(0); 
+            }
+            .nice-select.disabled {
+                border-color: #ededed;
+                color: #999;
+                pointer-events: none; }
+            .nice-select.disabled:after {
+                border-color: #cccccc; }
+            .nice-select .list {
+                width: 100%;
+                text-align: center;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+                box-sizing: border-box;
+                margin-top: 4px;
+                opacity: 0;
+                overflow: hidden;
+                padding: 0;
+                pointer-events: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                -webkit-transform-origin: 50% 0;
+                -ms-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+                -webkit-transform: scale(0.75) translateY(-21px);
+                -ms-transform: scale(0.75) translateY(-21px);
+                transform: scale(0.75) translateY(-21px);
+                -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+                transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+                z-index: 9; 
+            }
+            .nice-select .list:hover .option:not(:hover) {
+                background-color: transparent !important; 
+            }
+            .nice-select .option {
+                text-align: center;
+                cursor: pointer;
+                font-weight: 400;
+                line-height: 40px;
+                list-style: none;
+                min-height: 40px;
+                outline: none;
+                padding-left: 18px;
+                padding-right: 29px;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+            }
+            .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+                background-color: #f6f6f6; }
+            .nice-select .option.selected {
+                font-weight: bold; }
+            .nice-select .option.disabled {
+                background-color: transparent;
+                color: #999;
+                cursor: default; 
+            }
+
+            .no-csspointerevents .nice-select .list {
+                display: none; 
+            }
+
+            .no-csspointerevents .nice-select.open .list {
+                display: block; 
+            }
+        </style>
+    </head>
+    <body onload="awal()">
+        <br>
+        <br>
+        <br>
+        <section id="home">
+            <header class="default-header">
+                <div class="container">
+                    <div class="header-wrap">             
+                        <div class="header-top d-flex justify-content-between align-items-center">
+                            <div class="logo">                
+                                <a href="#home"><h1>Welcome</h1></a>
+                            </div>
+                            <div class="main-menubar d-flex align-items-center">
+                                <nav class="hide">
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/">Home</a>
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/antrian.html">List Antrian</a>
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/klinik.html">List Klinik</a>                                    
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/pasien.html">List Pasien</a>
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/dokter.html">List Dokter</a>
+                                </nav>
+                                <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div id="pilihan">
+            <center>
+                <button class="button button1" onclick="satu()">Tambah Klinik</button>
+                <button class="button button1" onclick="dua()">Tambah Dokter</button>
+                <button class="button button1" onclick="tiga()">Tambah Pasien</button>
+                <button class="button button1" onclick="empat()">Update Antrian Pasien</button>
+                <br>
+                <br>
+            </center>
+        </div> 
+    <center>
+        <form id="klinik" onsubmit="return tambahKlinik(this)" method="POST">
+            <label>ID Klinik</label><br>
+            <input type="text" id="idKlinik" placeholder="ID Klinik" required><br>
+            <label>Nama Klinik</label><br>
+            <input type="text" id="namaKlinik" placeholder="Nama Klinik" required><br>
+            <label>Spesialis Klinik</label><br>
+            <input type="text" id="spesialisKlinik" placeholder="Spesialis Klinik" required><br>
+            <button class="button button1" form="klinik" type="submit">Tambah Klinik</button><br><br>
+        </form>
+    </center>
+    <center>
+        <form id="dokter" onsubmit="return tambahDokter(this)" method="POST">
+            <label>ID Dokter</label><br>
+            <input type="text" id="idDokter" placeholder="ID Dokter" required><br>
+            <label>Nama Dokter</label><br>
+            <input type="text" id="namaDokter" placeholder="Nama Dokter" required><br>
+            <label>Spesialis Dokter</label><br>
+            <input type="text" id="spesialisDokter" placeholder="Spesialis Dokter" required><br>
+            <button class="button button1" form="dokter" type="submit">Tambah Dokter</button><br><br>
+        </form>
+    </center>
+    <center>
+        <form id="pasien" onsubmit="return tambahPasien(this)" method="POST">
+            <label>No. Rekam Medis</label><br>
+            <input type="text" id="noRm" placeholder="No. Rekam Medis" required><br>
+            <label>Nama Pasien</label><br>
+            <input type="text" id="namaPasien" placeholder="Nama Pasien" required><br>
+            <label>Alamat Pasien</label><br>
+            <input type="text" id="alamatPasien" placeholder="Alamat Pasien" required><br>
+            <label>NIK Pasien</label><br>
+            <input type="text" id="nikPasien" placeholder="NIK Pasien" required><br>
+            <label>Tanggal Lahir Pasien</label><br>
+            <input type="date" id="tanggalLahir" required><br>
+            <label>Jenis Kelamin Pasien</label><br>
+            <p>
+                <input type="radio" id="kelaminPasien" value="Laki-laki" name="rr"/>
+                <label><span></span>Laki-laki</label>
+                <input type="radio" id="kelaminPasien" value="Perempuan" name="rr"/>
+                <label><span></span>Perempuan</label>
+                <br><br>
+                <button class="button button1" form="pasien" type="submit">Tambah Pasien</button><br><br>
+        </form>
+    </center>
+    <center>
+        <form id="antrian" onsubmit="return tambahAntrian(this)" method="POST">
+            <label>No. Rekam Medis</label><br>
+            <input type="text" id="noRmCari" placeholder="No. Rekam Medis" required><br>
+            <button class="button button1" id="cariAntrian" onclick="cari()">Cari Pasien</button><br><br><br>
+            <label>Nama Pasien</label><br>
+            <input type="text" id="namaPasienCari" disabled><br>
+            <label>NIK Pasien</label><br>
+            <input type="text" id="nikPasienCari" disabled><br>
+            <label>Alamat Pasien</label><br>
+            <input type="text" id="alamatPasienCari" disabled><br>            
+            <label>Tanggal Rawat Inap</label><br>
+            <input type="date" id="tanggalCari" required><br>
+            <label>Nama Klinik</label><br>
+            <div id="pilih"></div>
+            <br><br>
+            <button class="button button1" form="klinik" type="submit">Tambah Klinik</button><br><br>
+        </form>
+    </center>
+
+    <script>
+        var url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Klinik/getKlinik";
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                getList(this.responseText);
+            }
+        }
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        function getList(response) {
+            var arr = JSON.parse(response);
+            var i;
+            var out = "<select id='pilihCari' class='nice-select'>";
+            for (i = 0; i < arr.length; i++) {
+                out += "<option value=\"'"+arr[i].nama+"'\">"+arr[i].nama+"</option>";
+            }
+            out += "</select>";
+            document.getElementById("pilih").innerHTML = out;
+            ;
+        }
+    </script>
+    <script>
+        function awal() {
+            document.getElementById("klinik").style.display = "none";
+            document.getElementById("dokter").style.display = "none";
+            document.getElementById("pasien").style.display = "none";
+            document.getElementById("antrian").style.display = "none";
+        }
+        function satu() {
+            document.getElementById("klinik").style.display = "block";
+            document.getElementById("dokter").style.display = "none";
+            document.getElementById("pasien").style.display = "none";
+            document.getElementById("antrian").style.display = "none";
+        }
+        function dua() {
+            document.getElementById("klinik").style.display = "none";
+            document.getElementById("dokter").style.display = "block";
+            document.getElementById("pasien").style.display = "none";
+            document.getElementById("antrian").style.display = "none";
+        }
+        function tiga() {
+            document.getElementById("klinik").style.display = "none";
+            document.getElementById("dokter").style.display = "none";
+            document.getElementById("pasien").style.display = "block";
+            document.getElementById("antrian").style.display = "none";
+        }
+        function empat() {
+            document.getElementById("klinik").style.display = "none";
+            document.getElementById("dokter").style.display = "none";
+            document.getElementById("pasien").style.display = "none";
+            document.getElementById("antrian").style.display = "block";
+        }
+        function tambahKlinik(form) {
+            var json = {
+                "idKlinik": form.idKlinik.value,
+                "nama": form.namaKlinik.value,
+                "spesialis": form.spesialisKlinik.value
+            };
+            var html = JSON.stringify(json, 0, 100);
+            var Url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Klinik/addKlinik";
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', Url, false);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(html);
+            alert("Klinik " + form.namaKlinik.value + " berhasil ditambahkan");
+            document.getElementById("klinik").style.display = "none";
+            return false;
+        }
+        
+        function tambahAntrian(form) {
+            var json = {
+                "nama": form.namaPasienCari.value,
+                "alamat": form.alamatPasienCari.value,
+                "namaKlinik": form.pilihCari.value,
+                "tanggal": form.tanggalCari.value,
+                "noRm": form.noRmCari.value
+            };
+            var html = JSON.stringify(json, 0, 100);
+            var Url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Antrian/addAntrian";
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', Url, false);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(html);
+            alert("Pasien " + form.namaPasienCari.value + " berhasil ditambahkan ke antrian");
+            document.getElementById("antrian").style.display = "none";
+            return false;
+        }
+        
+        function tambahDokter(form) {
+            var json = {
+                "id": form.idDokter.value,
+                "nama": form.namaDokter.value,
+                "spesialis": form.spesialisDokter.value
+            };
+            var html = JSON.stringify(json, 0, 100);
+            var Url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Dokter/addDokter";
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', Url, false);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(html);
+            alert("Dokter " + form.namaDokter.value + " berhasil ditambahkan");
+            document.getElementById("dokter").style.display = "none";
+            return false;
+        }
+        function tambahPasien(form) {
+            var json = {
+                "noRm": form.noRm.value,
+                "nama": form.namaPasien.value,
+                "alamat": form.alamatPasien.value,
+                "nik": form.nikPasien.value,
+                "tanggalLahir": form.tanggalLahir.value,
+                "kelamin": form.kelaminPasien.value
+            };
+            var html = JSON.stringify(json, 0, 100);
+            var Url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Pasien/addPasien";
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', Url, false);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(html);
+            alert("Pasien " + form.namaPasien.value + " berhasil ditambahkan");
+            document.getElementById("pasien").style.display = "none";
+            return false;
+        }
+
+        function cari() {
+            var url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Pasien/cariPasien?noRm=" + noRmCari.value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", url, true);
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var obj = JSON.parse(this.responseText);
+                    document.getElementById("namaPasienCari").value = obj.nama;
+                    document.getElementById("nikPasienCari").value = obj.nik;
+                    document.getElementById("alamatPasienCari").value = obj.alamat;
+                }
+            };
+        }
+    </script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

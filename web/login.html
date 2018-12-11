@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <style>
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            .button1 {
+                background-color: white; 
+                color: black; 
+                border: 2px solid #4CAF50;
+            }
+
+            .button1:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+            input[type=text], select {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type=password], select {
+                width: 50%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+        </style>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+        <link rel="icon" href="logo.png" type="image/x-icon"/>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/fav.png">
+        <!-- Author Meta -->
+        <meta name="author" content="Colorlib">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta charset="UTF-8">
+        <!-- Site Title -->
+        <title>Login Admin - Fake Hospital Yogyakarta</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/linearicons.css">=
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <section id="home">
+            <header class="default-header">
+                <div class="container">
+                    <div class="header-wrap">             
+                        <div class="header-top d-flex justify-content-between align-items-center">
+                            <div class="logo">                
+                                <a href="#home"><h1>Welcome</h1></a>
+                            </div>
+                            <div class="main-menubar d-flex align-items-center">
+                                <nav class="hide">
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs">Home</a>
+
+                                </nav>
+                                <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <div>
+            <center>
+                <form>
+                    <label>Email</label><br>
+                    <input type="text" id="email" required><br>
+                    <label>Password</label><br>
+                    <input type="password" id="password" required><br>
+                    <button class="button button1" onclick="login()">Login</button>
+                </form>
+            </center>
+        </div>
+        <script>
+            function login(){
+            var em = email.value;
+            var pw = password.value;
+            var url = 'http://202.94.83.190:8080/165314031_RSKUv2/webresources/User/login?email=' + em + '&password=' + pw;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var user = JSON.parse(this.responseText);
+                        if (user !== null) {
+                            alert("Selamat Datang " + user.email);
+                                var myWindow = window.open("halaman_admin.html", "_self");
+                        } else {
+                            alert("Login Gagal"); 
+                        }
+                    }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+            }
+        </script>
+        <script src="js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

